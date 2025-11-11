@@ -23,8 +23,11 @@ A validação de entrada é feita por meio de funções JavaScript que verificam
 ## 🧠 Estrutura do Projeto
 
 📂 Projeto-FutureSkills/
+
 ├── index.html # Estrutura do formulário e feedback
+
 ├── main.js # Lógica JS de validação e manipulação de elementos
+
 ├── README.md # Documento explicativo do projeto
 
 ---
