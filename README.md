@@ -56,8 +56,11 @@ A validação de entrada é feita por meio de funções JavaScript que verificam
 ## 👥 Integrantes do Grupo
 
 | Nome do Aluno            | RM       |
+
 | Camile Vitória Silva     | RM566649 |
+
 | Helton Pacheco dos Santos| RM567113 |
+
 | Marco Túlio Longo Conte  | RM568373 |
 
 ---
