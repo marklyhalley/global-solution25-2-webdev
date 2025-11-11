@@ -70,7 +70,7 @@ A validação de entrada é feita por meio de funções JavaScript que verificam
 
 ## 🧾 Observações Finais
 
-- Todo o código JavaScript foi escrito **sem uso de expressões regulares ou funções prontas**, utilizando apenas manipulação de strings, laços e lógica condicional.  
+- Todo o código JavaScript foi escrito **sem uso de frameworks ou bibliotecas externas**, utilizando apenas o JavaScript em sua forma **Vanilla**.  
 - O projeto segue as especificações e restrições apresentadas no enunciado oficial da avaliação.  
 
 ---
