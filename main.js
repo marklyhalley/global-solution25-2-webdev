@@ -56,7 +56,7 @@ function validarFormulario() {
     erros.push("O campo E-mail é obrigatório.");
   } else if (!checarEmail(email)) {
     //chama a função de validação e mostra mensagem de erro
-    erros.push("O e-mail informado é inválido. Deve conter apenas um '@' e terminar em '.com'.");
+    erros.push("O e-mail informado é inválido. Deve conter apenas um '@' e terminar com algum dos TLDs disponiveis (.net, . com ou .com.br).");
   }
 
   // Verifica se há pelo menos 3 habilidades (em caso de erros,utliza push para enviar a mensagem de erro ao vetor erro)
@@ -173,16 +173,39 @@ function checarEmail(valor) {
   // Verifica se o @ não esta no inicio ou no fim do texto
   if (posArroba === 0 || posArroba === email.length - 1) return false;
 
-  // Verifica se termina em ".com"
-  if (
-    email.length < 4 ||
-    email[email.length - 4] !== '.' ||
-    email[email.length - 3] !== 'c' ||
-    email[email.length - 2] !== 'o' ||
-    email[email.length - 1] !== 'm'
-  ) {
-    return false;
+  // Verifica se termina em ".com", ".com.br" ou ".net"
+  let terminaComCom = false;
+  let terminaComComBr = false;
+  let terminaComNet = false;
+
+  if (email.length >= 4 &&
+      email[email.length - 4] === '.' &&
+      email[email.length - 3] === 'c' &&
+      email[email.length - 2] === 'o' &&
+      email[email.length - 1] === 'm') {
+    terminaComCom = true;
   }
+
+  if (email.length >= 7 &&
+      email[email.length - 7] === '.' &&
+      email[email.length - 6] === 'c' &&
+      email[email.length - 5] === 'o' &&
+      email[email.length - 4] === 'm' &&
+      email[email.length - 3] === '.' &&
+      email[email.length - 2] === 'b' &&
+      email[email.length - 1] === 'r') {
+    terminaComComBr = true;
+  }
+
+  if (email.length >= 4 &&
+      email[email.length - 4] === '.' &&
+      email[email.length - 3] === 'n' &&
+      email[email.length - 2] === 'e' &&
+      email[email.length - 1] === 't') {
+    terminaComNet = true;
+  }
+
+  if (!terminaComCom && !terminaComComBr && !terminaComNet) return false;
 
   // Verifica se há pelo menos um caractere entre o '@' e o '.com', ou seja, o dominio
   let temDominio = false;
