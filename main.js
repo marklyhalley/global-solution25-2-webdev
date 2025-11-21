@@ -1,5 +1,8 @@
 // Vetor global para armazenar as habilidades selecionadas
 let vetorHabilidades = [];
+// Declarando variavel para guardar cpf apenas com números (sera usada para não exibir o cpf com caracteres alem de numeros no feedback)
+let cpfcru = ""
+
 
 // Função feita para adcionar uma habilidade e a exibir na tela como pedido
 function adicionarHabilidade() {
@@ -109,7 +112,7 @@ function exibirFeedback(vetorErros) {
       <p><strong>Resumo dos dados:</strong></p>
       <ul>
         <li><strong>Nome:</strong> ${document.getElementById("nome").value}</li>
-        <li><strong>CPF:</strong> ${document.getElementById("cpf").value}</li>
+        <li><strong>CPF:</strong> ${cpfcru}</li>
         <li><strong>E-mail:</strong> ${document.getElementById("email").value}</li>
         <li><strong>Habilidades:</strong> ${vetorHabilidades.join(", ")}</li>
         <li><strong>Tipo de Interesse:</strong> ${interesse}</li>
@@ -127,7 +130,7 @@ function exibirFeedback(vetorErros) {
 
 
 
-
+//função para checagem de email
 function checarEmail(valor) {
   // Converte todas as letras maiusculas em minusculas utilizando manipulação de strings 
   let emailminusc = "";
@@ -221,7 +224,7 @@ function checarEmail(valor) {
 }
 
 
-
+// função para checagem de cpf
 function checarCPF(valor) {
   // Utilizando "for" para remover qualquer caractere que não seja um numero entre 0 e 9
   let cpf = "";
@@ -230,6 +233,9 @@ function checarCPF(valor) {
       cpf += valor[i];
     }
   }
+
+  //guardando o cpf apenas de numeros para exibição futura
+  cpfcru = cpf
 
   // Verifica se possui 11 dígitos (condição 1 para cpf)
   if (cpf.length !== 11) return false;
