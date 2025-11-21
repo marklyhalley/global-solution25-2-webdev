@@ -147,7 +147,7 @@ function checarEmail(valor) {
   }
 
     
-  // Remove espaços que o usuario pode ter colocado antes e depois do texto do email
+  // Remove espaços que o usuario pode ter colocado no texto do email
   let email = "";
   for (let i = 0; i < emailminusc.length; i++) {
     if (emailminusc[i] !== ' ') {
@@ -219,7 +219,6 @@ function checarEmail(valor) {
 
   return true;
 }
-
 
 
 
