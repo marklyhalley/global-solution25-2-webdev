@@ -1,4 +1,4 @@
-# 🧩 Projeto — Inscrição para o Programa FutureSkills
+# 🧩 Projeto — Inscrição para o Programa Henka de Reskilling
 
 Este projeto foi desenvolvido como parte da avaliação da disciplina de **Web Dev** para a **FIAP Global Solution 2025/2**
 O sistema implementa um **formulário de inscrição interativo**, que realiza **validação de campos** usando **JavaScript puro (Vanilla JS)**, sem bibliotecas externas.
@@ -22,7 +22,7 @@ A validação de entrada é feita por meio de funções JavaScript que verificam
 
 ## 🧠 Estrutura do Projeto
 
-📂 Projeto-FutureSkills/
+📂 global-solution25-2-webdev/
 
 ├── index.html # Estrutura do formulário e feedback
 
